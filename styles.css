@@ -467,3 +467,44 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---------- Ajouts plaquette officielle ---------- */
+.hero-agree { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: #DCE8F7; font-weight: 500; }
+.hero-agree svg { width: 20px; height: 20px; color: var(--gold); flex-shrink: 0; }
+.official { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.official > div { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 4px; min-width: 0; }
+.official small { font: 500 10.5px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--sky); }
+.official b { font-size: 14px; color: var(--navy); overflow-wrap: anywhere; }
+.official span { font-size: 13.5px; color: var(--ink-2); }
+.motto { font: 500 italic 19px/1.4 var(--f-display); color: var(--navy); border-left: 3px solid var(--gold); padding-left: 14px; }
+.cond { list-style: none; padding: 0 !important; display: grid; gap: 0 !important; }
+.cond li { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.cond li:last-child { border-bottom: 0; }
+.cond b { color: var(--navy); }
+.docs { margin: 0; padding-left: 20px; display: grid; gap: 7px; }
+.docs li::marker { color: var(--sky); font-weight: 700; }
+.fee-chips, .pay { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.fee-chips div, .pay div { background: var(--mist); border-radius: 12px; padding: 14px; display: grid; gap: 4px; min-width: 0; }
+.fee-chips span, .pay span { font-size: 13px; color: var(--ink-2); }
+.fee-chips b, .pay b { font: 600 22px/1.1 var(--f-display); color: var(--navy); font-variant-numeric: tabular-nums; }
+.fee-chips small { font: 500 11px/1 var(--f-label); color: var(--ink-2); }
+.pay b { color: var(--navy); }
+.pay div:first-child { background: var(--navy); } .pay div:first-child b { color: var(--gold); } .pay div:first-child span { color: #C9D8EE; }
+.fees td { font-variant-numeric: tabular-nums; }
+.fees td:not(:first-child), .fees th:not(:first-child) { text-align: right; }
+.practical { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 40px; }
+.pr-item { background: var(--mist); border-radius: var(--r); padding: 24px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.pr-item .k { font: 500 11px/1 var(--f-label); letter-spacing: .12em; text-transform: uppercase; color: var(--sky); }
+.pr-item p { font-size: 15px; color: var(--ink-2); }
+.swatches { display: flex; gap: 8px; }
+.swatches i { width: 30px; height: 30px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px var(--line); }
+.hours { list-style: none; padding: 0; margin: 0; display: grid; }
+.hours li { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.hours li:last-child { border-bottom: 0; }
+.hours b { color: var(--navy); font-weight: 600; } .hours span { font-variant-numeric: tabular-nums; color: var(--ink-2); }
+.phones { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+@media (max-width: 640px) {
+  .official, .practical { grid-template-columns: 1fr; }
+  .fee-chips, .pay { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .fee-chips b, .pay b { font-size: 18px; }
+}
